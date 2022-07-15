@@ -7,7 +7,7 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
+import { Button } from "../button/button.component";
 
 const defaultFormFields = {
   displayName: "",
@@ -39,7 +39,7 @@ export const SignUpForm = () => {
         password
       );
 
-      setCurrentUser(user);
+      //setCurrentUser(user);
 
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
